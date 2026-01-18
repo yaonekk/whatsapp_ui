@@ -48,7 +48,9 @@ class MobileScreenLayout extends StatelessWidget {
             ],
           ),
         ),
-        body: ContactsList(),
+        body:
+            // single scroll needed to fix the bottom overflow issue
+            SingleChildScrollView(child: ContactsList()),
       ),
     );
   }

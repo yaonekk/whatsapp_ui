@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_ui/widgets/chat_list.dart';
 import 'package:whatsapp_ui/widgets/contacts_list.dart';
+import 'package:whatsapp_ui/widgets/web_chat_appbar.dart';
 import 'package:whatsapp_ui/widgets/web_profile_bar.dart';
 import 'package:whatsapp_ui/widgets/web_search_bar.dart';
 
@@ -39,7 +41,15 @@ class WebScreenLayout extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            child: Center(child: Text('Chats are here!')),
+            child: Column(
+              children: [
+                // Chat app bar
+                WebChatAppbar(),
+                // Chat List
+                Expanded(child: ChatList()),
+                // Message input Box
+              ],
+            ), // todo here
           ),
         ],
       ),

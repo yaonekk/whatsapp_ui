@@ -19,6 +19,7 @@ class WebSearchBar extends StatelessWidget {
           fillColor: searchBarColor,
           prefixIcon: const Padding(
             padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
+            child: Icon(Icons.search, size: 20),
           ),
           hintText: 'Search or start new chat',
           hintStyle: const TextStyle(fontSize: 14),

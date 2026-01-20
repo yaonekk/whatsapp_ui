@@ -13,32 +13,35 @@ class WebProfileBar extends StatelessWidget {
         border: Border(right: BorderSide(color: dividerColor)),
         color: webAppBarColor,
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          const CircleAvatar(
-            backgroundImage: NetworkImage(
-              'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg',
+      child: Padding(
+        padding: const EdgeInsets.only(left: 15.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const CircleAvatar(
+              backgroundImage: NetworkImage(
+                'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg',
+              ),
             ),
-          ),
-          SizedBox(
-            // width: MediaQuery.of(context).size.width * 0.15,
-          ), // Not the best approach (so we grouped the icons into row, and add mainAx.spaceB to the parent Row)
-          Row(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.comment),
-                color: Colors.grey,
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.more_vert),
-                color: Colors.grey,
-              ),
-            ],
-          ),
-        ],
+            SizedBox(
+              // width: MediaQuery.of(context).size.width * 0.15,
+            ), // Not the best approach (so we grouped the icons into row, and add mainAx.spaceB to the parent Row)
+            Row(
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.comment),
+                  color: Colors.grey,
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.more_vert),
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

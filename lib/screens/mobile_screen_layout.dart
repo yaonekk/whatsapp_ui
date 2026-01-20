@@ -51,6 +51,11 @@ class MobileScreenLayout extends StatelessWidget {
         body:
             // single scroll needed to fix the bottom overflow issue
             SingleChildScrollView(child: ContactsList()),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: tabColor,
+          child: Icon(Icons.comment, color: Colors.white),
+        ),
       ),
     );
   }
